@@ -1,0 +1,4 @@
+discord==1.7.3
+python-dotenv==0.19.1
+Presence
+sqlite3

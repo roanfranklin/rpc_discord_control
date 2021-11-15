@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=RPC Discord Control
+Comment=Rich Presence Discord
+Exec=rpcdiscord.sh
+Icon=rpcdiscord
+Terminal=false
+Type=Application
+StartupNotify=true

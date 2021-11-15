@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=RPC Discord Control
+Comment=Rich Presence Discord
+Path=/home/roanfranklin/Documentos/GitHub/rpc_discord_control
+Exec=./rpc_discord_control.py
+Icon=rcpdiscord.png
+Terminal=false
+Categories=Applications;
+StartupNotify=true
