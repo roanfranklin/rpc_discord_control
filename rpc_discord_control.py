@@ -345,6 +345,8 @@ class frmMain(QtWidgets.QMainWindow):
             CLIENT_ID = str(DATA_RPC.get('idclient'))
             self.edtClientID.setText(CLIENT_ID)
 
+            # https://cdn.discordapp.com/app-assets/{app_id}/{asset_id}.png
+
             if CLIENT_ID:
                 url = f"https://discordapp.com/api/oauth2/applications/{CLIENT_ID}/assets"
                 _REQUEST = requests.get(url)
@@ -499,8 +501,14 @@ class frmMain(QtWidgets.QMainWindow):
 
     def __updateRPCDiscord(self):
         CLIENT_ID = self.edtClientID.text()
-        DESCRIPTION1 = self.edtDescription1.text()
-        DESCRIPTION2 = self.edtDescription2.text()
+        if len(self.edtDescription1.text()) > 2:
+            DESCRIPTION1 = self.edtDescription1.text()
+        else:
+            DESCRIPTION1 = None
+        if len(self.edtDescription2.text()) > 2:
+            DESCRIPTION2 = self.edtDescription2.text()
+        else:
+            DESCRIPTION2 = None
         if len(self.cbLargeImage.currentText()) > 1:
             LARGE_IMAGE = self.cbLargeImage.currentText()
         else:
